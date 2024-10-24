@@ -15,9 +15,9 @@ provider "digitalocean" {
 }  
 
   
-resource "digitalocean_droplet" "anything_llm_instance" {  
+resource "digitalocean_droplet" "bridge_instance" {  
   image  = "ubuntu-24-04-x64"  
-  name   = "anything-llm-instance"  
+  name   = "bridge-instance"  
   region = "nyc3"  
   size   = "s-2vcpu-2gb"  
   

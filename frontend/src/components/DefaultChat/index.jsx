@@ -28,7 +28,7 @@ export default function DefaultChatContainer() {
     showModal: showNewWsModal,
     hideModal: hideNewWsModal,
   } = useNewWorkspaceModal();
-  const popMsg = !window.localStorage.getItem("anythingllm_intro");
+  const popMsg = !window.localStorage.getItem("bridge_intro");
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -279,7 +279,7 @@ export default function DefaultChatContainer() {
 
   useEffect(() => {
     function processMsgs() {
-      if (!!window.localStorage.getItem("anythingllm_intro")) {
+      if (!!window.localStorage.getItem("bridge_intro")) {
         setMockMessages([...MESSAGES]);
         return false;
       } else {
@@ -296,7 +296,7 @@ export default function DefaultChatContainer() {
         }, timer);
         timer += 2_500;
       });
-      window.localStorage.setItem("anythingllm_intro", 1);
+      window.localStorage.setItem("bridge_intro", 1);
     }
 
     processMsgs();

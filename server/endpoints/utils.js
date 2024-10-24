@@ -23,7 +23,7 @@ function utilEndpoints(app) {
 }
 
 function getGitVersion() {
-  if (process.env.ANYTHING_LLM_RUNTIME === "docker") return "--";
+  if (process.env.bridge_RUNTIME === "docker") return "--";
   try {
     return require("child_process")
       .execSync("git rev-parse HEAD")

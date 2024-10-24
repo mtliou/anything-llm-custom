@@ -14,11 +14,11 @@ export default function ImportedSkillList({
         <p>
           Learn about agent skills in the{" "}
           <a
-            href="https://docs.anythingllm.com/agent/custom/developer-guide"
+            href="https://docs.bridge.com/agent/custom/developer-guide"
             target="_blank"
             className="text-white/80 hover:underline"
           >
-            AnythingLLM Agent Docs
+            bridge Agent Docs
           </a>
           .
         </p>

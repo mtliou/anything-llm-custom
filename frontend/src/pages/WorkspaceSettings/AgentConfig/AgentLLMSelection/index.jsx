@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import AnythingLLMIcon from "@/media/logo/anything-llm-icon.png";
+import bridgeIcon from "@/media/logo/bridge-icon.png";
 import AgentLLMItem from "./AgentLLMItem";
 import { AVAILABLE_LLM_PROVIDERS } from "@/pages/GeneralSettings/LLMPreference";
 import { CaretUpDown, Gauge, MagnifyingGlass, X } from "@phosphor-icons/react";
@@ -47,7 +47,7 @@ const WARN_PERFORMANCE = [
 const LLM_DEFAULT = {
   name: "Please make a selection",
   value: "none",
-  logo: AnythingLLMIcon,
+  logo: bridgeIcon,
   options: () => <React.Fragment />,
   description: "Agents will not work until a valid selection is made.",
   requiredConfig: [],

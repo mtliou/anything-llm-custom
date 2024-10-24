@@ -10,7 +10,7 @@
   //   },
   //   "dockerfile": "Dockerfile"
   // },
-  // "containerUser": "anythingllm",
+  // "containerUser": "bridge",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bookworm",
   // Features to add to the dev container. More info: https://containers.dev/features.
@@ -96,7 +96,7 @@
   "remoteEnv": {
     "NODE_ENV": "development",
     "ESLINT_USE_FLAT_CONFIG": "true",
-    "ANYTHING_LLM_RUNTIME": "docker"
+    "bridge_RUNTIME": "docker"
   },
   // "initializeCommand": "echo Initialize....",
   "shutdownAction": "stopContainer",

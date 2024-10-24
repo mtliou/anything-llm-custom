@@ -20,8 +20,8 @@ const webBrowsing = {
               call: JSON.stringify({ query: "Winner of today's world series" }),
             },
             {
-              prompt: "What is AnythingLLM?",
-              call: JSON.stringify({ query: "AnythingLLM" }),
+              prompt: "What is bridge?",
+              call: JSON.stringify({ query: "bridge" }),
             },
             {
               prompt: "Current AAPL stock price",
@@ -167,7 +167,7 @@ const webBrowsing = {
               headers: {
                 Authorization: `Bearer ${process.env.AGENT_SEARCHAPI_API_KEY}`,
                 "Content-Type": "application/json",
-                "X-SearchApi-Source": "AnythingLLM",
+                "X-SearchApi-Source": "bridge",
               },
             })
               .then((res) => res.json())
@@ -345,7 +345,7 @@ const webBrowsing = {
               headers: {
                 "X-API-KEY": process.env.AGENT_SERPLY_API_KEY,
                 "Content-Type": "application/json",
-                "User-Agent": "anything-llm",
+                "User-Agent": "bridge",
                 "X-Proxy-Location": proxy_location,
                 "X-User-Agent": device_type,
               },
@@ -415,7 +415,7 @@ const webBrowsing = {
               method: "GET",
               headers: {
                 "Content-Type": "application/json",
-                "User-Agent": "anything-llm",
+                "User-Agent": "bridge",
               },
             })
               .then((res) => res.json())

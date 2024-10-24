@@ -4,7 +4,7 @@ import Sidebar from "@/components/SettingsSidebar";
 import { isMobile } from "react-device-detect";
 import System from "@/models/system";
 import showToast from "@/utils/toast";
-import AnythingLLMIcon from "@/media/logo/anything-llm-icon.png";
+import bridgeIcon from "@/media/logo/bridge-icon.png";
 import OpenAiLogo from "@/media/llmprovider/openai.png";
 import GenericOpenAiLogo from "@/media/llmprovider/generic-openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
@@ -272,10 +272,10 @@ export const AVAILABLE_LLM_PROVIDERS = [
   {
     name: "Native",
     value: "native",
-    logo: AnythingLLMIcon,
+    logo: bridgeIcon,
     options: (settings) => <NativeLLMOptions settings={settings} />,
     description:
-      "Use a downloaded custom Llama model for chatting on this AnythingLLM instance.",
+      "Use a downloaded custom Llama model for chatting on this bridge instance.",
     requiredConfig: [],
   },
 ];
@@ -451,7 +451,7 @@ export default function GeneralLLMPreference() {
                   >
                     <div className="flex gap-x-4 items-center">
                       <img
-                        src={selectedLLMObject?.logo || AnythingLLMIcon}
+                        src={selectedLLMObject?.logo || bridgeIcon}
                         alt={`${selectedLLMObject?.name} logo`}
                         className="w-10 h-10 rounded-md"
                       />

@@ -777,7 +777,7 @@ function isDownloadedModel(input = "") {
 }
 
 async function validDockerizedUrl(input = "") {
-  if (process.env.ANYTHING_LLM_RUNTIME !== "docker") return null;
+  if (process.env.bridge_RUNTIME !== "docker") return null;
 
   try {
     const { isPortInUse, getLocalHosts } = require("./portAvailabilityChecker");
@@ -792,7 +792,7 @@ async function validDockerizedUrl(input = "") {
 
     const isPortAvailableFromDocker = await isPortInUse(port, hostname);
     if (isPortAvailableFromDocker)
-      return "Port is not running a reachable service on loopback address from inside the AnythingLLM container. Please use host.docker.internal (for linux use 172.17.0.1), a real machine ip, or domain to connect to your service.";
+      return "Port is not running a reachable service on loopback address from inside the bridge container. Please use host.docker.internal (for linux use 172.17.0.1), a real machine ip, or domain to connect to your service.";
   } catch (error) {
     console.error(error.message);
     return "An error occurred while validating the URL";
